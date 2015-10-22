@@ -31,6 +31,46 @@ public class Card {
 	public void flip() {
 		flipped=true;
 	}
+	public int getColor()
+	{
+		if(suite.equals("heart")||suite.equals("diamond"))
+		{
+			return 1;
+		}
+		return 0;
+	}
+	public int getNum()
+	{
+		if(type.equals("king"))
+		{
+			return 13;
+		}
+		if(type.equals("queen"))
+		{
+			return 12;
+		}
+		if(type.equals("jack"))
+		{
+			return 11;
+		}
+		if(type.equals("ace"))
+		{
+			return 1;
+		}
+		if(type.equals("start"))
+		{
+			return 0;
+		}
+		
+		try{
+			return Integer.parseInt(type);
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.getMessage());
+		}
+		return 14;
+	}
 	
 	public int getX() {
 		return x;

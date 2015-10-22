@@ -5,11 +5,14 @@ import java.awt.event.MouseListener;
 
 public class Mouse implements MouseListener {
 
+	private static int mouseX=0,mouseY=0;
+	
 	public void mouseClicked(MouseEvent e) {
 		//System.out.println(e.getButton());
-		int mouseX=e.getX();
-		int mouseY=e.getY();
-		System.out.println(mouseX+", "+mouseY);
+		mouseX=e.getX();
+		mouseY=e.getY();
+		Solitare.setClicked();
+		//System.out.println(mouseX+", "+mouseY);
 		
 	}
 
@@ -32,5 +35,13 @@ public class Mouse implements MouseListener {
 
 	public void mouseReleased(MouseEvent e) {
 
+	}
+	public static int getX()
+	{
+		return mouseX;
+	}
+	public static int getY()
+	{
+		return mouseY;
 	}
 }

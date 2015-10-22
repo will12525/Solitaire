@@ -1,11 +1,15 @@
 package solitare;
 
+import java.awt.AWTException;
 import java.awt.BorderLayout;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
+import java.awt.MouseInfo;
+import java.awt.Point;
+import java.awt.Robot;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -26,17 +30,25 @@ public class Solitare extends Canvas{
 
 
 	private boolean running = false;
+	private static boolean clicked = false;
+	private boolean cardInHand = false;
 	private int fpsS=0;
 	private JFrame frame;
 	private BufferedImage cardBack=null;
 
+	private List<Card> pileInHand = new ArrayList<Card>();
+
 	private List<Card> deck = new ArrayList<Card>();
 	private List<Card> deckFlipped = new ArrayList<Card>();
+
+	private List<List<Card>> finalSuite = new ArrayList<List<Card>>();
 
 	private List<Card> spades = new ArrayList<Card>();
 	private List<Card> clubs = new ArrayList<Card>();
 	private List<Card> hearts = new ArrayList<Card>();
 	private List<Card> diamonds = new ArrayList<Card>();
+
+	private List<List<Card>> piles = new ArrayList<List<Card>>();
 
 	private List<Card> pile1 = new ArrayList<Card>();
 	private List<Card> pile2 = new ArrayList<Card>();
@@ -46,6 +58,10 @@ public class Solitare extends Canvas{
 	private List<Card> pile6 = new ArrayList<Card>();
 	private List<Card> pile7 = new ArrayList<Card>();
 
+	private int lastPile=0;
+	private int toPile = 0;
+	private int selectedRow = 0;
+	private int selectedColumn = 0;
 
 	public Solitare()
 	{
@@ -73,10 +89,165 @@ public class Solitare extends Canvas{
 	}
 	public void tick()
 	{
+		int mouseX=0;
+		int mouseY=0;
+		toPile=0;
+		Card placeOn = null;
+		if(clicked)
+		{
+			if(pileInHand.size()>0)
+			{
+				cardInHand=true;
+			}
+			else
+			{
+				cardInHand=false;
+			}
+			mouseX = (int) (Mouse.getX()-frame.getLocation().getX());
+			mouseY = (int) (Mouse.getY()-frame.getLocation().getY());
 
+
+			int xOffset = frame.getWidth()/10;
+			int yOffset = frame.getHeight()/5;
+
+			//place cards
+			if(cardInHand)
+			{
+				if(mouseY>=yOffset)
+				{
+					for(int x=0;x<piles.size();x++)
+					{
+						if(mouseX>xOffset*(x+3)&&mouseX<xOffset*(x+4))
+						{
+							List<Card> tempPile = piles.get(x);
+							if(tempPile.size()>0)
+							{
+								placeOn = tempPile.get(tempPile.size()-1);
+								toPile = x;
+							}
+							else{
+								placeOn = null;
+								toPile=x;
+							}
+						}
+					}
+					if(placeCard(pileInHand.get(0),placeOn))
+					{
+						//places card on the desired pile
+						for(int k=0;k<pileInHand.size();k++)
+						{
+							piles.get(toPile).add(pileInHand.get(k));
+						}
+						pileInHand.clear();
+						//piles.get(toPile).add(inHand);
+						if(lastPile!=7)
+						{
+							if(piles.get(lastPile).size()>0)
+							{
+								piles.get(lastPile).get(piles.get(lastPile).size()-1).flip();
+							}
+						}
+
+					}
+					else if(lastPile==7)
+					{
+						//the flipped deck
+						deckFlipped.add(pileInHand.get(0));
+						pileInHand.clear();
+					}
+					else
+					{
+						for(int k=0;k<pileInHand.size();k++)
+						{
+							piles.get(lastPile).add(pileInHand.get(k));
+						}
+						pileInHand.clear();
+					}
+				}
+			}
+			//pickup cards
+			if(!cardInHand&&pileInHand.size()<=0)
+			{
+				//the piles
+				if(mouseY>=yOffset)
+				{
+					for(int x=0;x<piles.size();x++)
+					{
+						if(mouseX>xOffset*(x+3)&&mouseX<xOffset*(x+4))
+						{
+							List<Card> tempPile = piles.get(x);
+							if(tempPile.size()>0)
+							{
+								for(int k=0;k<tempPile.size();k++)
+								{
+									if(mouseY>tempPile.get(k).getY())
+									{
+										if(k==tempPile.size()-1)
+										{
+											pileInHand.add(tempPile.get(k));
+											piles.get(x).remove(k);
+											lastPile=x;
+										}
+										else if(mouseY<tempPile.get(k+1).getY())
+										{
+											System.out.println("hi");
+											for(int j=k;j<tempPile.size();j++)
+											{
+												if(tempPile.get(j).getFlipped())
+												{
+													pileInHand.add(tempPile.get(j));
+												}
+												lastPile=x;
+											}
+											piles.get(x).removeAll(pileInHand);
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				//the deck
+				if(mouseY<yOffset&&mouseX<xOffset*2&&mouseX>xOffset)
+				{
+					if(deck.size()>0)
+					{
+						deckFlipped.add(deck.get(deck.size()-1));
+						deckFlipped.get(deckFlipped.size()-1).flip();
+						deck.remove(deck.size()-1);
+					}
+					else if(deckFlipped.size()>0)
+					{
+						for(int x=deckFlipped.size()-1;x>=0;x--)
+						{
+							Card temp = deckFlipped.get(x);
+							temp.flip();
+							deck.add(temp);
+						}
+						deckFlipped.clear();
+					}
+				}
+				//the flipped deck
+				if(mouseY<yOffset&&mouseX<xOffset*3&&mouseX>xOffset*2)
+				{
+					if(deckFlipped.size()>0)
+					{
+						pileInHand.add(deckFlipped.get(deckFlipped.size()-1));
+						deckFlipped.remove(pileInHand.get(0));
+						lastPile=7;
+					}
+				}
+
+			}
+
+		}
+
+		clicked =false;
 	}
 	public void render()
 	{
+		Point p = MouseInfo.getPointerInfo().getLocation();
+
 		BufferStrategy bs = getBufferStrategy();
 		if(bs==null)
 		{
@@ -86,53 +257,63 @@ public class Solitare extends Canvas{
 		Graphics g = bs.getDrawGraphics();
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, frame.getWidth(), frame.getHeight());
-	
+
 		int xOffset = frame.getWidth()/10;
 		int yOffset = frame.getHeight()/5;
-		
-		drawCards(pile1,g,xOffset*3,yOffset*1);
-		drawCards(pile2,g,xOffset*4,yOffset*1);
-		drawCards(pile3,g,xOffset*5,yOffset*1);
-		drawCards(pile4,g,xOffset*6,yOffset*1);
-		drawCards(pile5,g,xOffset*7,yOffset*1);
-		drawCards(pile6,g,xOffset*8,yOffset*1);
-		drawCards(pile7,g,xOffset*9,yOffset*1);
-		
+
+		for(int x=0;x<piles.size();x++)
+		{
+			int rePos = drawPiles(piles.get(x),g,xOffset*(x+3),yOffset);
+			{
+				for(int y=0;y<piles.get(x).size();y++)
+				{
+					piles.get(x).get(y).setY(yOffset+(y*rePos));
+				}
+			}
+		}
+
 		if(deckFlipped.size()>0)
 		{
-			g.drawImage(deckFlipped.get(deckFlipped.size()-1).getCard(),xOffset*2, 20, null);
+			g.drawImage(deckFlipped.get(deckFlipped.size()-1).getCard(),xOffset*2, 0, null);
 		}
 		if(deck.size()>0)
 		{
-			g.drawImage(cardBack, xOffset, 20, null);
+			g.drawImage(cardBack, xOffset, 0, null);
 		}
-		
-		drawPiles(spades,g,xOffset*6,0);
-		drawPiles(clubs,g,xOffset*7,0);
-		drawPiles(hearts,g,xOffset*8,0);
-		drawPiles(diamonds,g,xOffset*9,0);
-		
+
+		for(int x=0;x<finalSuite.size();x++)
+		{
+			drawFinal(finalSuite.get(x),g,xOffset*(x+6),0);
+		}
+
+		if(pileInHand.size()>0)
+		{
+			for(int x=0;x<pileInHand.size();x++)
+			{
+				g.drawImage(pileInHand.get(x).getCard(),(int)p.getX(), (int)p.getY()+(x*20), null);
+			}
+		}
 
 		g.setColor(Color.WHITE);
 		g.drawString(fpsS+"", 20, 20);
-		
+
 		g.dispose();
 		bs.show();
 	}
-	public void drawPiles(List<Card> theCards, Graphics g,int xCord, int yCord)
+	public void drawFinal(List<Card> theCards, Graphics g,int xCord, int yCord)
 	{
-		
+		//g.drawImage(theCards.get(theCards.size()-1).getCard(), xCord,yCord,null);
 		for(int x=0;x<theCards.size();x++)
 		{
 			g.drawImage(theCards.get(x).getCard(), xCord, yCord, null);
 		}
 	}
-	public void drawCards(List<Card> theCards,Graphics g, int xCord,int yCord)
+	public int drawPiles(List<Card> theCards,Graphics g, int xCord,int yCord)
 	{
 		int rePos=30;
-		if(theCards.size()>10)
+		if(theCards.size()>12)
 		{
-			rePos=10;
+			rePos=20;
 		}
 		for(int x=0;x<theCards.size();x++)
 		{
@@ -145,7 +326,27 @@ public class Solitare extends Canvas{
 			{
 				g.drawImage(cardBack, xCord, yCord+(rePos*x), null);
 			}
+
 		}
+		return rePos;
+	}
+
+	public boolean placeCard(Card cardToPlace, Card placeOn)
+	{
+		if(placeOn==null)
+		{
+			if(cardToPlace.getNum()==13)
+			{
+				return true;
+			}
+			return false;
+		}
+		if(((cardToPlace.getNum()+1)==placeOn.getNum())&&(cardToPlace.getColor()!=placeOn.getColor()))
+		{
+			return true;	
+		}
+
+		return false;
 	}
 
 	public void runGame()
@@ -179,7 +380,7 @@ public class Solitare extends Canvas{
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			if(shouldRender&&frames<60)
+			if(shouldRender)
 			{
 				frames++;
 				render();
@@ -206,57 +407,33 @@ public class Solitare extends Canvas{
 			deck.set(spot1, holder2);
 			deck.set(spot2, holder);
 		}
+		piles.add(pile1);
+		piles.add(pile2);
+		piles.add(pile3);
+		piles.add(pile4);
+		piles.add(pile5);
+		piles.add(pile6);
+		piles.add(pile7);
 
+		for(int x=0;x<piles.size();x++)
+		{
+			populate(piles.get(x),x+1);
+			piles.get(x).get(piles.get(x).size()-1).flip();;
+		}
 
-		populate(1);
-		populate(2);
-		populate(3);
-		populate(4);
-		populate(5);
-		populate(6);
-		populate(7);
-
-		pile1.get(0).flip();
-		pile2.get(1).flip();
-		pile3.get(2).flip();
-		pile4.get(3).flip();
-		pile5.get(4).flip();
-		pile6.get(5).flip();
-		pile7.get(6).flip();
-				
+		finalSuite.add(spades);
+		finalSuite.add(clubs);
+		finalSuite.add(hearts);
+		finalSuite.add(diamonds);
 	}
-	public void populate(int amount)
+	public void populate(List<Card> aPile,int amount)
 	{
 		for(int x=0;x<amount;x++)
 		{
 			int cardToMove = (int) (Math.random()*deck.size());
-			switch(amount)
-			{
-			case 1:
-				pile1.add(deck.get(cardToMove));
-				break;
-			case 2:
-				pile2.add(deck.get(cardToMove));
-				break;
-			case 3:
-				pile3.add(deck.get(cardToMove));
-				break;
-			case 4:
-				pile4.add(deck.get(cardToMove));
-				break;
-			case 5:
-				pile5.add(deck.get(cardToMove));
-				break;
-			case 6:
-				pile6.add(deck.get(cardToMove));
-				break;
-			case 7:
-				pile7.add(deck.get(cardToMove));
-				break;
-			}
+			aPile.add(deck.get(cardToMove));
 			deck.remove(cardToMove);
 		}
-
 	}
 
 	public void loadCards()
@@ -285,7 +462,11 @@ public class Solitare extends Canvas{
 			}
 		}
 		try {
-			cardBack = resize(ImageIO.read(new File(mainPath+"solitare/blankCard.png")));
+			cardBack = resize(ImageIO.read(new File(mainPath+"cardHolders/blankCard.png")));
+			spades.add(new Card("spade","start",resize(ImageIO.read(new File(mainPath+"cardHolders/Spade.jpg")))));
+			clubs.add(new Card("club","start",resize(ImageIO.read(new File(mainPath+"cardHolders/Club.jpg")))));
+			hearts.add(new Card("heart","start",resize(ImageIO.read(new File(mainPath+"cardHolders/Heart.jpg")))));
+			diamonds.add(new Card("diamond","start",resize(ImageIO.read(new File(mainPath+"cardHolders/Diamond.jpg")))));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -321,6 +502,10 @@ public class Solitare extends Canvas{
 		g2d.dispose();
 
 		return dimg;
+	}
+	public static void setClicked()
+	{
+		clicked =true;
 	}
 
 	public static void main(String[] args) {
