@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="222d767f-2bbf-4639-9ac6-a50d300ff2ba" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../workspace/Solitare/src/solitare/Solitaire.java" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cardHolders\Club.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cardHolders\Diamond.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cardHolders\Heart.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cardHolders\Spade.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cardHolders\blankCard.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\10Club.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\10Diamond.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\10Heart.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\10Spade.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\2Club.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\2Diamond.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\2Heart.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\2Spade.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\3Club.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\3Diamond.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\3Heart.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\3Spade.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\4Club.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\4Diamond.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\4Heart.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\4Spade.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\5Club.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\5Diamond.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\5Heart.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\5Spade.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\6Club.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\6Diamond.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\6Heart.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\6Spade.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\7Club.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\7Diamond.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\7Heart.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\7Spade.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\8Club.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\8Diamond.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\8Heart.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\8Spade.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\9Club.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\9Diamond.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\9Heart.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\9Spade.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\AceClub.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\AceDiamond.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\AceHeart.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\AceSpade.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\JackClub.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\JackDiamond.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\JackHeart.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\JackSpade.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\KingClub.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\KingDiamond.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\KingHeart.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\KingSpade.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\QueenClub.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\QueenDiamond.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\QueenHeart.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\cards\QueenSpade.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\lawrencew\Dropbox\workspace\Solitare\src\solitare\Solitare.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../workspace/Solitare/src/solitare/Card.java" afterPath="$PROJECT_DIR$/../../workspace/Solitare/src/solitare/Card.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../workspace/Solitare/src/solitare/Mouse.java" afterPath="$PROJECT_DIR$/../../workspace/Solitare/src/solitare/Mouse.java" />
+    </list>
+    <ignored path="Solitare.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/../../workspace/Solitare/bin/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Solitare" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="Deck.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../workspace/Solitare/src/solitare/Deck.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="112" column="43" selection-start-line="112" selection-start-column="43" selection-end-line="112" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#266#272#0" expanded="true" />
+                <element signature="e#342#348#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pile.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../workspace/Solitare/src/solitare/Pile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.148148">
+              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Solitaire.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../workspace/Solitare/src/solitare/Solitaire.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.57866186">
+              <caret line="191" column="31" selection-start-line="191" selection-start-column="31" selection-end-line="191" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#17130#17131#0" expanded="true" />
+                <element signature="e#17160#17161#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../workspace/Solitare" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/../../workspace/Solitare/src/solitare/Solitare.java" />
+        <option value="$PROJECT_DIR$/../../workspace/Solitare/src/solitare/pooper.java" />
+        <option value="$PROJECT_DIR$/../../workspace/Solitare/src/solitare/Deck.java" />
+        <option value="$PROJECT_DIR$/../../workspace/Solitare/src/solitare/Solitaire.java" />
+      </list>
+    </option>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="916" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Solitare" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Solitare" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Solitare" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Solitare" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Solitare" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="solitare" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Solitare" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Solitare" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="recentsLimit" value="5" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="FullScreen" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="false" name="Solitaire" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="solitare.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="solitare.Solitaire" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Solitare" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Application.Solitaire" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.Solitaire" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="222d767f-2bbf-4639-9ac6-a50d300ff2ba" name="Default" comment="" />
+      <created>1446071011970</created>
+      <option name="number" value="Default" />
+      <updated>1446071011970</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="916" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.244114" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961586" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../../workspace/Solitare/src/solitare/Pile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.148148">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../workspace/Solitare/src/solitare/Deck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="112" column="43" selection-start-line="112" selection-start-column="43" selection-end-line="112" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#266#272#0" expanded="true" />
+            <element signature="e#342#348#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../workspace/Solitare/src/solitare/Solitaire.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57866186">
+          <caret line="191" column="31" selection-start-line="191" selection-start-column="31" selection-end-line="191" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#17130#17131#0" expanded="true" />
+            <element signature="e#17160#17161#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
