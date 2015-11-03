@@ -8,12 +8,9 @@ public class Mouse implements MouseListener {
 	private static int mouseX=0,mouseY=0;
 	
 	public void mouseClicked(MouseEvent e) {
-		//System.out.println(e.getButton());
 		mouseX=e.getX();
 		mouseY=e.getY();
 		Solitaire.setClicked();
-		//System.out.println(mouseX+", "+mouseY);
-		
 	}
 
 	public void mouseEntered(MouseEvent e) {

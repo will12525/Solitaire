@@ -3,40 +3,30 @@ package solitare;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Deck {
-	private List<Card> deck = new ArrayList<Card>();
+	private List<Card> deck = new ArrayList<>();
 	private int amount=0;
-	private List<Card> holders = new ArrayList<Card>();
+	private List<Card> holders = new ArrayList<>();
 
-	public Deck(int amount)
-	{
-		
+	public Deck(int amount) {
 		this.amount=amount;
-		
-			loadCards();
-		
-		
-			shuffle();
+		loadCards();
+		shuffle();
 	}
 
-	public int getSize()
-	{
+	public int getSize() {
 		return deck.size();
 	}
 
-	public Card removeCard(int position)
-	{
+	public Card removeCard(int position) {
 		Card toReturn = deck.get(position);
 		deck.remove(position);
 		return toReturn;
 	}
-	public Card getCard(int position)
-	{
+	public Card getCard(int position) {
 		return deck.get(position);
 	}
 	public void add(Card card)
@@ -44,38 +34,30 @@ public class Deck {
 		deck.add(card);
 	}
 	
-	public Card getHolder(String type)
-	{
-		if(type.toLowerCase().equals("back"))
-		{
+	public Card getHolder(String type) {
+		if(type.toLowerCase().equals("back")) {
 			return holders.get(0);
 		}
-		if(type.toLowerCase().equals("spade"))
-		{
+		if(type.toLowerCase().equals("spade")) {
 			return holders.get(1);
 		}
-		else if(type.toLowerCase().equals("club"))
-		{
+		else if(type.toLowerCase().equals("club")) {
 			return holders.get(2);
 		}
-		else if(type.toLowerCase().equals("heart"))
-		{
+		else if(type.toLowerCase().equals("heart")) {
 			return holders.get(3);
 		}
-		else if(type.toLowerCase().equals("diamond"))
-		{
+		else if(type.toLowerCase().equals("diamond")) {
 			return holders.get(4);
 		}
-		else
-		{
+		else {
 			System.out.println("query didnt match available suites");
 			return holders.get(0);
 		}
 	}
 	public void shuffle()
 	{
-		for(int x=0;x<deck.size()*5;x++)
-		{
+		for(int x=0;x<deck.size()*5;x++) {
 			int spot1=(int) (Math.random()*deck.size());
 			int spot2=(int) (Math.random()*deck.size());
 			Card holder = deck.get(spot1);
@@ -84,25 +66,19 @@ public class Deck {
 			deck.set(spot2, holder);
 		}
 	}
-	public void loadCards()
-	{
-		//URL url = this.getClass().getResource("/resources");
-
-		//String mainPath =url.getPath();
+	private void loadCards() {
 		String path = "cards/";
-		for(int j=0;j<amount;j++)
-		{
-			for(int k=1;k<14;k++)
-			{
-				String cardPath = path+k+"Spade.jpg";
+		for(int j=0;j<amount;j++) {
+			for (int k = 1; k < 14; k++) {
+				String cardPath = path + k + "Spade.jpg";
 
-				deck.add(createCard("spade",k,cardPath));
-				cardPath = path+k+"Club.jpg";
-				deck.add(createCard("club",k,cardPath));
-				cardPath = path+k+"Heart.jpg";
-				deck.add(createCard("heart",k,cardPath));
-				cardPath = path+k+"diamond.jpg";
-				deck.add(createCard("diamond",k,cardPath));
+				deck.add(createCard("spade", k, cardPath));
+				cardPath = path + k + "Club.jpg";
+				deck.add(createCard("club", k, cardPath));
+				cardPath = path + k + "Heart.jpg";
+				deck.add(createCard("heart", k, cardPath));
+				cardPath = path + k + "Diamond.jpg";
+				deck.add(createCard("diamond", k, cardPath));
 			}
 		}
 		path = "cardHolders/";
@@ -113,30 +89,24 @@ public class Deck {
 		holders.add(createCard("heart",0,path+"Heart.jpg"));
 		holders.add(createCard("diamond",0,path+"Diamond.jpg"));
 	}
-	public Card createCard(String suite,int value,String cardPath)
-	{
+	private Card createCard(String suite,int value,String cardPath) {
 		BufferedImage img=null;
 		try {
-			URL file = this.getClass().getResource("/" + cardPath);
-			img = ImageIO.read(file);
+			img = ImageIO.read(this.getClass().getResourceAsStream("/"+cardPath));
 		} catch (Exception e) {
-			Solitaire.toClip(e.getMessage());
+
+			System.out.println(e.getMessage());
 		}
-		if(img==null)
-		{
-			//input == null!
+		if(img==null) {
 			System.out.println("there was an error loading images, good bye");
-			Solitaire.toClip("image == null");
 			System.exit(0);
 		}
-		//Solitaire.toClip(this.getClass().getResourceAsStream("/resources"+cardPath).toString());
 		return new Card(suite,value,resize(img));
 	}
-	public BufferedImage resize(BufferedImage img)
-	{
+	private BufferedImage resize(BufferedImage img) {
 		int scale = 3;
 
-		Image tmp = img.getScaledInstance(img.getWidth()/scale, img.getHeight()/scale, Image.SCALE_SMOOTH);
+        Image tmp = img.getScaledInstance(img.getWidth()/scale, img.getHeight()/scale, Image.SCALE_SMOOTH);
 		BufferedImage dimg = new BufferedImage(img.getWidth()/scale, img.getHeight()/scale, BufferedImage.TYPE_INT_ARGB);
 
 		Graphics2D g2d = dimg.createGraphics();
