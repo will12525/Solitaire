@@ -78,7 +78,7 @@ public class Solitaire extends Canvas {
             }
 
         }
-        boolean cardInHand;
+        boolean cardInHand = false;
         boolean checkWin = false;
         boolean placeCard = false;
         int mouseX;
@@ -107,6 +107,7 @@ public class Solitaire extends Canvas {
                     List<Card> cards = stacks.get(p);
                     int size = cards.size() - 1;
                     if (mouseY > yOffset && !p.isFinal()) {
+                        //placing a card on the stacks
                         if (cards.size() > 0) {
                             if (((cards.get(size).getX() * xOffset) < mouseX) && (((cards.get(size).getX() + 1) * xOffset) > mouseX)) {
                                 if (pileInHand.size() > 0) {
@@ -137,11 +138,11 @@ public class Solitaire extends Canvas {
                             }
                         }
                     } else if (p.isFinal() && mouseY < yOffset && pileInHand.size() <= 1) {
-                        //final stacks
+                        //placing card on final stack
                         if ((((cards.get(0).getX() - 4) * xOffset) < mouseX) && (((cards.get(0).getX() - 3) * xOffset) > mouseX)) {
                             System.out.println(cards.get(0).getSuite() + ", " + pileInHand.get(0).getSuite() + ", " + cards.get(size).getValue() + 1 + ", " + pileInHand.get(0).getValue());
                             if (cards.get(0).getSuite().equals(pileInHand.get(0).getSuite()) && cards.get(size).getValue() + 1 == pileInHand.get(0).getValue()) {
-                                placeCard =  place(p,cards);
+                                placeCard = place(p,cards);
                                 checkWin=true;
                                 score+=10;
                             }
@@ -158,10 +159,8 @@ public class Solitaire extends Canvas {
                     } else {
                         boolean didntPlace = true;
                         Pile possiblePlace = null;
-                        int counter =0;
                         for(Pile p : Pile.values())
                         {
-                            counter++;
                             List<Card> stack = stacks.get(p);
                             if(stack.size()>0)
                             {
@@ -176,7 +175,6 @@ public class Solitaire extends Canvas {
                                 possiblePlace = p;
                             }
                         }
-                        System.out.println(counter);
                         if(didntPlace)
                         {
                             place(possiblePlace,stacks.get(possiblePlace));
@@ -218,7 +216,7 @@ public class Solitaire extends Canvas {
                                 Card card = stack.get(k);
                                 if ((mouseX > xOffset * card.getX()) && (mouseX < xOffset * (card.getX() + 1))) {
 
-                                  /*  if(k+1==stack.size())
+                                    if(k+1==stack.size())
                                     {
                                         if (card.getFlipped()) {
                                             pileInHand.add(card);
@@ -230,8 +228,8 @@ public class Solitaire extends Canvas {
                                             score+=5;
                                         }
                                         System.out.println("hi");
-                                    }*/
-                                     if (card.getY() > mouseY) {
+                                    }
+                                    else if (card.getY() > mouseY) {
                                         if (card.getFlipped()) {
                                             pileInHand.add(card);
                                             cardsToRemove.add(card);
@@ -241,6 +239,7 @@ public class Solitaire extends Canvas {
                                             card.flip();
                                             score+=5;
                                         }
+                                        System.out.println("hello");
                                     }
                                 }
                             }
@@ -277,6 +276,7 @@ public class Solitaire extends Canvas {
                             deckFlipped.get(deckFlipped.size() - 1).flip();
                             deck.removeCard(deck.getSize() - 1);
                         } else if (deckFlipped.size() > 0) {
+                            //puts all cards back in the deck
                             for (int x = deckFlipped.size() - 1; x >= 0; x--) {
                                 Card temp = deckFlipped.get(x);
                                 temp.flip();
@@ -284,7 +284,6 @@ public class Solitaire extends Canvas {
                                 score-=100;
                             }
                             deckFlipped.clear();
-
                         }
                     }
                     //the flipped deck
@@ -297,12 +296,25 @@ public class Solitaire extends Canvas {
                     }
                 }
             }
+            //flip cards
+            if(pileInHand.size()==0) {
+                for (Pile p : Pile.values()) {
+                    List<Card> stack = stacks.get(p);
+                    if (stack.size() > 0) {
+                        if (!(p.isFinal()) && !(stack.get(stack.size() - 1).getFlipped())) {
+                            stack.get(stack.size() - 1).flip();
+                        }
+                    }
+                }
+            }
         }
         if(score<0)
         {
             score = 0;
         }
         clicked = false;
+
+
 
     }
 
